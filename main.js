@@ -52,3 +52,22 @@ function setGameOver()
     document.body.append(restButton);
     restButton.addEventListener('click', restGame);
 }
+
+function restGame()
+{
+    guessCount = 1;
+
+    const resetParas = document.querySelectorAll('.resultParas p');
+    for ( const resetParas of resetParas ) {
+        resetParas.textContent = '';
+    } 
+    resetButton.parentNode.removeChild(resetButton);
+
+    guessField.disabled = false;
+    guessSubmit.disabled = false;
+    guessField.value = '';
+    guessField.focus();
+
+    lastResult.style.backgroundColor = 'white';
+    randomNumber = Math.floor(Math.random() * 100) + 1;
+}
