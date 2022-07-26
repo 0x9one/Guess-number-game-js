@@ -14,6 +14,7 @@ function checkGuess() {
     }
 
     guesses.textContent += userGuess + ' ';
+    
 
     if (userGuess === randomNumber) {
         lastResult.textContent = 'Congratulations! You got it right!';
