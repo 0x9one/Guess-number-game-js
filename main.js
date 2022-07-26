@@ -42,3 +42,13 @@ function checkGuess()
 }
 
 guessSubmit.addEventListener('click', checkGuess);
+
+function setGameOver()
+{
+    guessField.disabled = true;
+    guessSubmit.disabled = true;
+    restButton = document.createElement('button');
+    restButton.textContent = 'Start new game';
+    document.body.append(restButton);
+    restButton.addEventListener('click', restGame);
+}
